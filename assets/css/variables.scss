@@ -1,0 +1,43 @@
+// Initial variables //
+$primary: #64ccc9;
+$secondary: #002650;
+$secondary-dark: #000d19;
+$grey: #686868;
+$grey-secondary: #686868;
+$lightgrey: #b4b5b3;
+$border-radius: 100px;
+
+// Fonts //
+$family-primary: Helvetica, Arial, sans-serif;
+$family-serif: serif;
+// Font sizes //
+$font-size: 16px;
+$font-medium: 14px;
+$font-small: 11px;
+
+// Breakpoints
+$mobile: 576px;
+$mobile-large: 577px;
+$tablet: 768px;
+$desktop: 1008px;
+$widescreen: 1200px;
+$fullhd: 1392px;
+
+// Gutter
+$gap: 24px;
+
+// ==========================================================================
+// Base – Mixins
+// ==========================================================================
+@mixin line-clamp($numLines, $lineHeight: 1.412) {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  display: block;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  -webkit-line-clamp: $numLines;
+  -moz-binding: url("/ellipsis.xml#ellipsis");
+  -webkit-box-orient: vertical;
+  max-height: $numLines * $lineHeight + unquote("em");
+}

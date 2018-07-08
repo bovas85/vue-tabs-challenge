@@ -1,0 +1,143 @@
+/*!
+ * Alessandro Giordo CSS Grid Framework (https://moustachedesign.xyz)
+ * Copyright 2017-2018 Alessandro Giordo
+ * Licensed under MIT (https://styleguide.nakedtesting.com/license)
+ */
+
+$gap: 24px;
+// @import '~bulma/sass/utilities/initial-variables';
+// Breakpoints
+$mobile: 480px !default;
+$tablet: 768px !default;
+$desktop: 1024px !default;
+$widescreen: 1200px !default;
+$fullhd: 1442px !default;
+
+// Initial Styles + resets
+html,
+body {
+  font-family: $family-primary;
+  font-size: $font-size;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  transition: all 1s ease-in-out;
+  // font-size: responsive 14px 21px; /* min-size, max-size */
+  // font-range: 480px 1280px; /* viewport widths between which font-size is fluid */
+}
+
+// Main pages Layout
+@import './layout';
+
+@import './fonts.scss';
+@import './variables.scss';
+@import './animations.scss';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Maison Neue';
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Eina 03';
+}
+
+.app {
+  height: 100%;
+
+  @media (min-width: $desktop) {
+    height: 160vh;
+  }
+}
+
+.mock-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    height: 150vh;
+  }
+
+  img {
+    width: 200px;
+    margin: 24px auto;
+  }
+
+  p {
+    display: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+.mobile-sliders,
+.desktop-tabs {
+  h1 {
+    max-width: 300px;
+    color: #182237;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 33px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 52px;
+  }
+}
+
+.desktop-tabs {
+  h1 {
+    margin: 70px auto;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.app-tab {
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%; // IE 11 bug
+  transition: opacity 0.6s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.is-relative {
+  position: relative;
+
+  @media (min-width: $desktop) {
+    min-height: 980px;
+    height: 100%;
+  }
+}

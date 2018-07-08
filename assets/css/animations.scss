@@ -1,0 +1,14 @@
+// animations and transitions
+.fade-enter-active,
+.fade-leave-active {
+  position: absolute;
+  transition: opacity 0.6s ease-out both;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-leave,
+.fade-enter-to {
+  opacity: 1;
+}
