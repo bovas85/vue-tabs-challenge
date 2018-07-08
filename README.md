@@ -11,6 +11,22 @@ I've reused most of the code from React while adapting it to Vue and optimising 
 
 A similar approach can be done using Next.js.
 
+## Summary of the test
+
+For this code challenge, I will create a section of a landing page that displays the offerings from . It will include 3 tabbed sections that automatically switches tabs until the user navigates to a tab on their own. On mobile, it simply provides 3 sections with horizontal scrolling.
+
+## Requirements
+
+- Matches Design
+- Responsive
+- Automatically swaps tabs
+  - Progress bar shows time until swap
+  - Pauses when the links are not in the viewport
+- Clicking a tab link swaps to the tab
+  - This also stops the auto swapping
+- Mobile shows all 3 sections with horizontal scrolling
+
+
 ## Build Setup
 
 ```bash
