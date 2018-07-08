@@ -1,9 +1,9 @@
 # Starter Template
 
 > Starter Template
-> test Code Challenge
+> Code Challenge
 
-Live app: https://test-code-challenge-tggcvoxvpy.now.sh/
+Link to react app: https://github.com/bovas85/react-tabs-challenge
 
 This is just a quick app rushed to produce something similar to what I sent in React 2 days ago.
 
